@@ -8,40 +8,10 @@ namespace ToDoList.Core.Models
 {
     public class User : BaseEntity
     {
-		// Properties
-		public string Email
-		{
-			get
-			{
-				return _email; 
-			}
-			set
-			{
-				_email = value; 
-			}
-		}
-        public string Username
-		{
-			get
-			{
-				return _userName;
-			}
-			set
-			{
-				_userName = value;
-			}
-		}
-		public string Password
-		{
-			get
-			{
-				return _password;
-			}
-			set
-			{
-				_password = value;
-			}
-		}
+        // Properties
+        public string Email { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
 
         // Navigation Properties
         public ICollection<Task> Tasks { get; set; }
