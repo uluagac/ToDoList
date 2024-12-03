@@ -12,6 +12,7 @@ namespace ToDoList.Core.Models
         public string Name { get; set; }
 
         // Navigation Properties
+        public int UserId { get; set; }
         public User AssignedUser { get; set; }
         public int TaskId { get; set; }
         public Task ParentTask { get; set; }
