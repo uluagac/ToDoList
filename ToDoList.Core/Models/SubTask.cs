@@ -9,11 +9,11 @@ namespace ToDoList.Core.Models
     public class SubTask : BaseEntity
     {
         // Properties
-        public string Name { get; set; }
+        public string Title { get; set; }
 
         // Navigation Properties
-        public int UserId { get; set; }
-        public User AssignedUser { get; set; }
+        public int? AssignedUserId { get; set; }
+        public User? AssignedUser { get; set; }
         public int TaskId { get; set; }
         public Task ParentTask { get; set; }
     }

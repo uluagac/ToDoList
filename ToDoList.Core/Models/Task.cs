@@ -9,7 +9,7 @@ namespace ToDoList.Core.Models
     public class Task : BaseEntity
     {
         // Properties
-        public string Name { get; set; }
+        public string Title { get; set; }
         public string? Description { get; set; }
         public DateTime? CompletionDate { get; set; }
 
