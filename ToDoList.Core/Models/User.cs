@@ -14,7 +14,8 @@ namespace ToDoList.Core.Models
         public string Password { get; set; }
 
         // Navigation Properties
-        public ICollection<Task> Tasks { get; set; }
-        public ICollection<User> FriendList { get; set; }
+        public ICollection<ToDoTask> ToDoTasks { get; set; } = new List<ToDoTask>();
+        public ICollection<SubTask> SubTasks { get; set; } = new List<SubTask>();
+        public ICollection<Friendship> Friendships { get; set; } = new List<Friendship>();
     }
 }

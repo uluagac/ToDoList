@@ -8,9 +8,9 @@ namespace ToDoList.Core.Models
 {
     public abstract class BaseEntity
     {
+        // Properties
         public int Id { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public DateTime? UpdatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
         public bool IsDeleted { get; set; } = false;
     }
 }

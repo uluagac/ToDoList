@@ -15,6 +15,6 @@ namespace ToDoList.Core.Models
         public int? AssignedUserId { get; set; }
         public User? AssignedUser { get; set; }
         public int TaskId { get; set; }
-        public Task ParentTask { get; set; }
+        public ToDoTask ParentTask { get; set; }
     }
 }
