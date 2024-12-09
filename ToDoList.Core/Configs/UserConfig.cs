@@ -15,6 +15,7 @@ namespace ToDoList.Core.Configs
         {
             builder.Property(user => user.Username).HasColumnType("nvarchar(20)");
             builder.Property(user => user.Email).HasColumnType("nvarchar(50)");
+            builder.HasIndex(user => user.Email).IsUnique();
         }
     }
 }

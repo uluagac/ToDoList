@@ -18,9 +18,13 @@ namespace ToDoList.Core.Configs
             builder.HasKey(f => new { f.RequesterId, f.ReceiverId });
 
             // Foreign Key Relationships
-            builder.HasOne(f => f.Requester).WithMany().HasForeignKey(f => f.RequesterId).OnDelete(DeleteBehavior.NoAction);
-            builder.HasOne(f => f.Receiver).WithMany().HasForeignKey(f => f.ReceiverId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(f => f.Requester).WithMany(u => u.SentFriendRequests).HasForeignKey(f => f.RequesterId).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(f => f.Receiver).WithMany(u => u.ReceivedFriendRequests).HasForeignKey(f => f.ReceiverId).OnDelete(DeleteBehavior.NoAction);
             builder.Property(f => f.Status).HasConversion<string>();
+
+            // Index
+            builder.HasIndex(f => f.RequesterId);
+            builder.HasIndex(f => f.ReceiverId);
 
             // Ignore
             builder.Ignore(f => f.Id);
