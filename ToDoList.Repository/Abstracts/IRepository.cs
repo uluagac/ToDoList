@@ -12,7 +12,7 @@ namespace ToDoList.Repository.Abstracts
         int Add(T entity);
         int Update(T entity);
         int Delete(T entity);
+        T GetById(int id);
         ICollection<T> GetAll();
-        ICollection<T> GetById(int id);
     }
 }
