@@ -9,5 +9,8 @@ namespace ToDoList.Repository.Abstracts
 {
     public interface IUserRepository : IBaseRepository<User>
     {
+        bool Authenticate (string username, string password);
+        User GetByUsername(string username);
+        IEnumerable<User> GetFriends(int userId);
     }
 }
