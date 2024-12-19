@@ -9,5 +9,9 @@ namespace ToDoList.Repository.Abstracts
 {
     public interface IToDoTaskRepository : IBaseRepository<ToDoTask>
     {
+        IEnumerable<ToDoTask> GetUserTasks(int userId);
+        IEnumerable<ToDoTask> GetTasksByStatus(int userId, TaskStatus status);
+        IEnumerable<ToDoTask> GetTasksByDueDate(int userId, DateTime dueDate);
+        ToDoTask GetTaskWithSubTasks(int taskId);
     }
 }
