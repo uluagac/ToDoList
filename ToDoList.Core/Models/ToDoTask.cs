@@ -12,6 +12,8 @@ namespace ToDoList.Core.Models
         // Properties
         public string Title { get; set; }
         public string? Description { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public DateTime? DueDate { get; set; }
         public DateTime? CompletionDate { get; set; }
 
         // Enum
