@@ -9,5 +9,6 @@ namespace ToDoList.Repository.Abstracts
 {
     public interface IFriendshipRepository : IBaseRepository<Friendship>
     {
+        
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ToDoList.Core.Enums;
 
 namespace ToDoList.Core.Models
 {
@@ -10,6 +11,9 @@ namespace ToDoList.Core.Models
     {
         // Properties
         public string Title { get; set; }
+
+        // Enums
+        public ToDoTaskStatus Status { get; set; } = ToDoTaskStatus.Continue;
 
         // Navigation Properties
         public int? AssignedUserId { get; set; }
